@@ -14,3 +14,11 @@ $(obj).mouseout(function(){
 $(obj).click(function(){
         $(this).hide();
     });
+
+
+
+// accordion
+var acc = document.getElementsByClassName("accordion");
+var cont= document.getElementsByClassName("container");
+var i;
+
