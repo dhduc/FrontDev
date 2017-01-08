@@ -193,6 +193,47 @@
     </div>
     <!-- /.content-section-a -->
 
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <section id="accor">
+                        <div class="accordion">
+                            <h3 class="title-accordion">
+                                <span>Packed Full of Powerful Features1</span>
+                            </h3>
+                            <div class="content-accordion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <h3 class="title-accordion">
+                                <span>Packed Full of Powerful Features2</span>
+                            </h3>
+                            <div class="content-accordion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <h3 class="title-accordion">
+                                <span>Packed Full of Powerful Features3</span>
+                            </h3>
+                            <div class="content-accordion">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
 	<a  name="contact"></a>
     <div class="banner">
 
@@ -242,7 +283,7 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#contact" class="contact">Contact</a>
                         </li>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
@@ -256,6 +297,21 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var allPanels = $('.accordion > .content-accordion').hide();
+    
+          $('.accordion > .title-accordion > span').click(function() {
+            allPanels.slideUp();
+            $(this).parent().next().slideDown();
+            return false;
+          });
+        });
+
+        $(document).click(function() {
+           $(".contact").parent().css({"border": "solid 1px blue", "background": "gray"}); 
+        });
+    </script>
 
     <!-- add js custom -->
     <script type="text/javascript" src="js/jquery-custom.js"></script>
