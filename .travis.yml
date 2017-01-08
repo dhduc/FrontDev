@@ -1,9 +1,11 @@
 language: node_js
 node_js:
   - "6"
+branches:
+  only:
+    - master  
 before_script:
   - npm install
   - npm install -g gulp
-  - git merge origin/theme
 script:
   - gulp default
