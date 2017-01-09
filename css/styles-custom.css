@@ -5,6 +5,11 @@
 	background: #f0f;
 	border: 10px solid #f00 !important;
 }
+
+[class*="content-section-"] .container.active {
+	 display: block;
+}
+
 .accordion{
 	float: right;
 	width: 10px;
@@ -15,4 +20,17 @@
 	margin-right: 100px;
 	transform: rotate(45deg);
 	cursor: pointer;
+}
+
+/* slider demo */
+#slideshow{
+	position: relative;
+	height:655px
+}
+#slideshow li.item{
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%)
 }
